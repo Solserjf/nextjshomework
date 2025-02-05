@@ -1,4 +1,4 @@
-import {GetAllUsers} from "@/app/services/api.service";
+import {GetAllUsers} from "@/services/api.service";
 import Link from "next/link";
 
 export const UsersComponent = async () => {

@@ -1,7 +1,7 @@
-import {UsersComponent} from "@/app/components/UsersComponent";
+import {UsersComponent} from "@/components/UsersComponent";
 
 
-const page = () => {
+const Page = () => {
     return (
         <div>
             <UsersComponent/>
@@ -9,4 +9,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

@@ -1,4 +1,4 @@
-import {IUser} from "@/app/models/IUser";
+import {IUser} from "@/models/IUser";
 
 type UserComponentProps = {
     item: IUser;
