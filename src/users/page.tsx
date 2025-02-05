@@ -1,1 +1,0 @@
-let myCommit = "this is my first commit on this project";
