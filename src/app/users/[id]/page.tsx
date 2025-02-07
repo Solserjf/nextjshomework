@@ -1,7 +1,7 @@
 import {FC, memo} from "react";
 import {GetOneUser} from "@/services/api.service";
 import {SearchParams} from "next/dist/server/request/search-params";
-import {IUser} from "@/models/IUser";
+import {IUser} from "@/models/users/IUser";
 
 
 type PropsTypeUserPage = {
@@ -12,15 +12,15 @@ type PropsTypeUserPage = {
 const UserPage:FC<PropsTypeUserPage> = async ({params, searchParams} ) => {
     const {id} = await params;
     const {data} = await searchParams;
-    let obj = null;
+    let objUser = null;
     const user = await GetOneUser(id);
     if (typeof data === "string") {
-        obj = (JSON.parse(data)) as IUser;
+        objUser = (JSON.parse(data)) as IUser;
     }
    return (
        <div>
            {
-               obj && <>{obj.id} {obj.name} {obj.username} {obj.phone}</>
+               objUser && <>{objUser.id} {objUser.name} {objUser.username} {objUser.email} {objUser.phone} {objUser.website}</>
            }
        </div>
    )

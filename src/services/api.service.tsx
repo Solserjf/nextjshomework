@@ -1,5 +1,6 @@
-import {IUser} from "@/models/IUser";
+import {IUser} from "@/models/users/IUser";
 import {IPost} from "@/models/posts/IPost";
+import {IComment} from "@/models/comments/IComment";
 
 
 export const GetAllUsers = async ():Promise<IUser[]> => {
@@ -18,3 +19,10 @@ export const GetOnePost = async (id:string):Promise<IPost> => {
     return  await fetch('https://jsonplaceholder.typicode.com/posts' + id).then(value => value.json());
 }
 
+export const GetAllComments = async ():Promise<IComment[]> => {
+   return  await fetch('https://jsonplaceholder.typicode.com/comments').then(value => value.json());
+}
+
+export const GetOneComment = async (id:string):Promise<IComment> => {
+    return  await fetch('https://jsonplaceholder.typicode.com/comments' + id).then(value => value.json());
+}

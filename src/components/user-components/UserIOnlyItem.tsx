@@ -1,4 +1,4 @@
-import {IUser} from "@/models/IUser";
+import {IUser} from "@/models/users/IUser";
 
 type UserOnlyItemProps = {
     item: IUser;
